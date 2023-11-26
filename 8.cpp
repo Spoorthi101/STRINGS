@@ -3,14 +3,20 @@
 int main ()
 {
 	char s[1000];
-	printf("enter string:");
+	printf("Enter string:");
 	gets(s);
-	int i,k=0;
 	int L=strlen(s);
-	for (i=0;i<L;i++)
+	int i,c=0;
+	for (i=0;i<L/2;i++)
 	{
-		if (s[i]==65||s[i]==69||s[i]==73||s[i]==79||s[i]==85||s[i]==97||s[i]==101||s[i]==105||s[i]==111||s[i]==117)
-		{printf("%c ",s[i]);}
+		if (s[i]==s[L-i-1])
+		{
+			c++;
+		}
 	}
+	if (c>0)
+	printf("It is a palindrome");
+	else if (c==0)
+	printf("It is not a palindrome");
 	return 0;
 }
