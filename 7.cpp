@@ -18,7 +18,7 @@ int main ()
 			break;
 		}
 	}
-	if (k==0)
+	if (L1==L2 && k==0)
 	printf("The strings s1 and s2 are equal");
 	else
 	printf("The strings s1 and s2 are not equal");
