@@ -9,14 +9,15 @@ int main ()
 	int i,c=0;
 	for (i=0;i<L/2;i++)
 	{
-		if (s[i]==s[L-i-1])
+		if (s[i]!=s[L-i-1])
 		{
 			c++;
+			break;
 		}
 	}
 	if (c>0)
-	printf("It is a palindrome");
-	else if (c==0)
 	printf("It is not a palindrome");
+	else if (c==0)
+	printf("It is a palindrome");
 	return 0;
 }
